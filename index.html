@@ -1,247 +1,55 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>21432</title>
-    <!-- Bootstrap -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom styles -->
-    <style>
-      body {
-        font-family: 'Arial', sans-serif;
-        background: linear-gradient(45deg, #d3d3d3, #ffffff, #d3d3d3, #ffffff);
-        background-size: 400% 400%;
-        animation: gradientAnimation 10s ease infinite;
-        color: #212529; /* 改成深色文字 */
-      }
-
-      @keyframes gradientAnimation {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-      }
-
-      .navbar {
-        background-color: rgba(0, 0, 0, 0.8); /* 半透明黑色背景 */
-      }
-
-      .navbar-brand, .nav-link {
-        color: #fff !important; /* navbar文字設為白色 */
-      }
-
-      .navbar-nav .nav-item.active .nav-link,
-      .navbar-nav .nav-item .nav-link:hover {
-        color: #ddd !important; /* 當鼠標懸停時的顏色 */
-      }
-
-      .container {
-        margin-top: 50px;
-      }
-
-      h1, h2 {
-        color: #333;
-      }
-
-      .media img {
-        border-radius: 50%;
-        border: 3px solid #333;
-      }
-
-      .badge-secondary {
-        background-color: #6c757d;
-      }
-
-      .img-thumbnail {
-        border: 3px solid #ddd;
-        transition: transform 0.3s ease;
-        cursor: pointer;
-      }
-
-      .img-thumbnail:hover {
-        transform: scale(1.05);
-      }
-
-      footer {
-        background-color: #333;
-        color: white;
-        padding: 20px 0;
-        text-align: center;
-      }
-
-      footer p {
-        margin: 0;
-      }
-
-      .section-title {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: #333;
-      }
-
-      .col-md-6 {
-        margin-bottom: 30px;
-      }
-
-      .row > .col-md-6 > .row {
-        margin-bottom: 15px;
-      }
-		.img-thumbnail {
-	  border: 3px solid #ddd;
-	  transition: transform 0.3s ease;
-	  cursor: pointer;
-	  max-width: 100%; /* 確保圖片大小不會超過其父容器 */
-	  max-height: 200px; /* 限制圖片的最大高度 */
-	  width: auto; /* 保持比例 */
-	  height: auto; /* 保持比例 */
-	  }
-
-	  .img-thumbnail:hover {
-		  transform: scale(1.05);
-	  }
-
-    </style>
-  </head>
-  <body>
-    <!-- Add Navigation Bar here -->
-    <nav class="navbar navbar-expand-lg navbar-dark py-3">
-      <a class="navbar-brand" href="#">MyWebsite</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-
-      </div>
-    </nav>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高雄景點介紹</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="nav py-0">
+        <img src="images/logo.png" width="313" height="99" class="mb-2">
+        <a href="#" class="mt-5">回到首頁</a>
+        <a href="#" class="mt-5">最新消息</a>
+        <a href="#" class="mt-5">景點目錄</a>
+        <a href="contact.html" class="mt-5">聯絡我們</a>
+    </div><br><br>
 
     <div class="container">
-      <hr>
-      <div class="row">
-        <div class="col-12">
-          <h1><b>蔡靚盈</b></h1>
-          <p class="lead">學生 | 高雄高商資料處理科</p>
-        </div>
-      </div>
-      <hr>
-      <div class="row">
-        <div class="col-md-8 col-sm-12">
-          <div class="media">
-            <img src="images/hi.png" width="150" class="mr-3">
-            <div class="media-body">
-              <h5 class="mt-0">高雄高商資料處理科</h5>
-              學生
+        <div class="image-gallery">
+            <div class="gallery-wrapper">
+                <img src="images/1.png" alt="三鳳宮">
+                <img src="images/2.jpg" alt="逍遙園">
+                <img src="images/3.jpg" alt="三塊厝車站">
             </div>
-          </div>
+            <div class="arrow prev" onclick="moveSlide(-1)">&#10094;</div>
+            <div class="arrow next" onclick="moveSlide(1)">&#10095;</div>
         </div>
-        <div class="col-md-4 col-sm-12">
-          <div class="row justify-content-md-around m-1">
-			 <a href="https://www.ksvcs.kh.edu.tw/" target="_blank"><img src="images/ksvcs_logo.png" width="313" height="70"></a>
-            <address>
 
-              <strong>地址</strong><br>
-              高雄市新興區五福二路3號<br>
-              <abbr title="Phone">P:</abbr> (07) 226-9975<br>
-            </address>
-          </div>
+        <div class="section" id="section-0">
+            <h2>三鳳宮</h2>
+            <p>三鳳宮是高雄歷史悠久的廟宇，主祀關聖帝君，建築華麗且香火鼎盛。</p>
         </div>
-      </div>
-      <hr>
-      
-      <h2 class="section-title ">專業能力與經歷</h2>
-      <div class="row py-3">
-        <div class="col-md-6">
-          <h4 class="py-2"><b>專業證照</b></h4>
-          <h5><span class="badge badge-secondary">證照類</span></h5>
-          <ul>
-            <li>電腦軟體應用丙級</li>
-            <li>TQC Powerpoint/Word 2019 實用級</li>
-            <li>商教會商業概論三級</li>
-            <li>Microsoft Excel Expert (Office 2019)</li>
-
-          </ul>
-          <h5><span class="badge badge-secondary">競賽類</span></h5>
-          <ul>
-            <li>113資訊月資訊應用技能競賽</li>
-            <li>APCS</li>
-            <li>分區技能競賽</li>
-            <li>全國專題及創意競賽</li>
-          </ul>
+        <div class="section" id="section-1">
+            <h2>逍遙園</h2>
+            <p>逍遙園是擁有百年歷史的日式庭園，原為昭和天皇宿舍，現為市定古蹟。</p>
         </div>
-<br>
-        <div class="col-md-6">
-          <h4 class="py-2"><b>活動經歷</b></h4>
-          <h5><span class="badge badge-secondary">活動參與</span></h5>
-          <ul>
-            <li>健智電腦科技有限公司</li>
-            <li>TQC Powerpoint 2019 實用級</li>
-            <li>TQC Word 實用級</li>
-          </ul>
-<br>
-          <h5><span class="badge badge-secondary">職場參訪</span></h5>
-          <ul>
-            <li>健智電腦科技有限公司</li>
-            <li>國家高速網路中心與計算機中心</li>
-            <li>萬國通路股份有限公司</li>
-          </ul>
+        <div class="section" id="section-2">
+            <h2>三塊厝車站</h2>
+            <p>三塊厝車站為台鐵高雄地區的通勤小站，具有百年歷史。</p>
         </div>
-      </div>
-      <hr>
-
-		<h2 class="section-title">實作成果</h2>
-		<div class="row text-center">
-		  <div class="col-md-3 col-6 p-2">
-			<img src="images/21432 (1).PNG" alt="Portfolio Image 1" class="img-thumbnail img-fluid" data-toggle="modal" data-target="#imageModal" onclick="openModal('images/21432 (1).PNG', '這是我利用tinkercad 製作的3D 列印吊牌。')">
-		  </div>
-		  <div class="col-md-3 col-6 p-2">
-			<img src="images/21432-1.PNG" alt="Portfolio Image 2" class="img-thumbnail img-fluid" data-toggle="modal" data-target="#imageModal" onclick="openModal('images/21432-1.PNG', '這是我利用tinkercad 製作的3D 列印吊牌側面圖。')">
-		  </div>
-		  <div class="col-md-3 col-6 p-2">
-			<img src="images/21432.png" alt="Portfolio Image 3" class="img-thumbnail img-fluid" data-toggle="modal" data-target="#imageModal" onclick="openModal('images/21432.png', '這是我利用Illustrator 繪製的圖片。')">
-		  </div>
-		  <div class="col-md-3 col-6 p-2">
-			<img src="images/a.PNG" alt="Portfolio Image 4" class="img-thumbnail img-fluid" data-toggle="modal" data-target="#imageModal" onclick="openModal('images/a.PNG', '這是我利用威力導演製作的影片介紹。')">
-		  </div>
-		</div>
-
-      <hr>
-
     </div>
 
-    <!-- Footer -->
-    <footer>
-      <p>&copy; 2025 MyWebsite. All rights reserved.</p>
-    </footer>
+    <div class="footer py-4">&copy; 21432 高雄景點介紹.</div>
 
-    <!-- Image Modal -->
-    <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="imageModalLabel">圖片查看</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <img id="modalImage" src="" alt="Image" class="img-fluid">
-            <p id="modalDescription" class="mt-3"></p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- 引入外部 JavaScript -->
+    <script src="js/script.js"></script>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Bootstrap 相關套件 -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
-    <script>
-      function openModal(imageSrc, description) {
-        document.getElementById('modalImage').src = imageSrc;
-        document.getElementById('modalDescription').textContent = description;
-      }
-    </script>
-  </body>
+</body>
 </html>
